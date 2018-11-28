@@ -7,7 +7,7 @@
 Keep the http_host if no special http_user_agent is given. Otherwise rewrite the http_host.
 
 ```
-# url = save current http_host (directly requested "-origin" url should be redirected to "-origin" url)
+# url = save current http_host (directly requested "-origin" url should keep the "-origin" url)
 RewriteRule .* - [ENV=url:%{HTTP_HOST}]
 
 # url = redirect url without "-origin" if http_user_agent is "Amazon CloudFront"
