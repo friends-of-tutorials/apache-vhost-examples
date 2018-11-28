@@ -4,7 +4,7 @@
 
 ### 1.1 User-agent depended http_host
 
-Keep the http_host if no special http_user_agent is given.
+Keep the http_host if no special http_user_agent is given. Otherwise rewrite the http_host.
 
 ```
 # url = save current http_host (directly requested "-origin" url should be redirected to "-origin" url)
