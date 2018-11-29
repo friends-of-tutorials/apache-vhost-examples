@@ -2,9 +2,23 @@
 
 ## 1. Variables
 
-### 1.1 HTTP_HOST Redirects "User-agent depended"
+Some Basics:
 
-Keep the http_host if no special http_user_agent is given. Otherwise rewrite the http_host.
+```
+# default
+RewriteRule .* - [ENV=url:%{HTTP_HOST}]
+
+# overwrite if the conditions are met (RewriteCond). 
+RewriteCond ...
+RewriteCond ...
+RewriteRule .* - [ENV=url:test.domain.de]
+
+...
+```
+
+### 1.1 Example: User-agent dependent redirects
+
+Always redirect to current http_host. If a special user-agent is given, rewrite the current http_host.
 
 ```
 # url = save current http_host (directly requested "-origin" url should keep the "-origin" url)
