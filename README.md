@@ -2,7 +2,7 @@
 
 ## 1. Variables
 
-### 1.1 User-agent depended http_host
+### 1.1 HTTP_HOST Redirects "User-agent depended"
 
 Keep the http_host if no special http_user_agent is given. Otherwise rewrite the http_host.
 
