@@ -8,7 +8,7 @@ Some Basics:
 # default
 RewriteRule .* - [ENV=url:%{HTTP_HOST}]
 
-# overwrite if the conditions are met (RewriteCond). 
+# overwrite, if the conditions are met (RewriteCond). 
 RewriteCond ...
 RewriteCond ...
 RewriteRule .* - [ENV=url:test.domain.de]
